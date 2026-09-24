@@ -41,21 +41,19 @@
       text-align: center;
     }
 
-    /* Logo officiel KS */
     .logo-container {
       margin-bottom: 20px;
     }
 
     .logo-img {
-      width: 170px;
-      height: 170px;
+      width: 160px;
+      height: 160px;
       border-radius: 50%;
       object-fit: cover;
       border: 2px solid var(--accent-green);
       box-shadow: 0 0 25px rgba(144, 209, 54, 0.4);
     }
 
-    /* Enseigne KALI SUD avec le A stylisé */
     .brand-title {
       font-size: 2.3rem;
       font-weight: 900;
@@ -87,7 +85,6 @@
       background-color: var(--accent-green);
     }
 
-    /* Boutons de liens */
     .links-list {
       display: flex;
       flex-direction: column;
@@ -131,7 +128,6 @@
       cursor: pointer;
     }
 
-    /* Modal QR Code */
     .modal {
       display: none;
       position: fixed;
@@ -190,60 +186,14 @@
 <body>
 
   <div class="container">
-    <!-- Logo Officiel KS circulaire vectoriel -->
+    <!-- Remplace le NOM_EXACT_DU_FICHIER ci-dessous (ex: logo-png.png ou logo.png.PNG) -->
     <div class="logo-container">
-      <svg class="logo-img" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stop-color="#0a120b"/>
-            <stop offset="100%" stop-color="#020402"/>
-          </radialGradient>
-          <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#e8f3a3"/>
-            <stop offset="30%" stop-color="#a4e03b"/>
-            <stop offset="70%" stop-color="#5a8c16"/>
-            <stop offset="100%" stop-color="#2a4507"/>
-          </linearGradient>
-          <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#c1f054"/>
-            <stop offset="50%" stop-color="#69a318"/>
-            <stop offset="100%" stop-color="#325208"/>
-          </linearGradient>
-          <filter id="glow">
-            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-            <feMerge>
-              <feMergeNode in="coloredBlur"/>
-              <feMergeNode in="SourceGraphic"/>
-            </feMerge>
-          </filter>
-        </defs>
-        <!-- Fond sombre -->
-        <circle cx="250" cy="250" r="240" fill="url(#bgGrad)"/>
-        <!-- Anneaux extérieurs -->
-        <circle cx="250" cy="250" r="230" fill="none" stroke="url(#ringGrad)" stroke-width="8" filter="url(#glow)"/>
-        <circle cx="250" cy="250" r="215" fill="none" stroke="url(#ringGrad)" stroke-width="3" opacity="0.8"/>
-        <!-- Arc de texte HAUT : KALI SUD -->
-        <path id="textArcTop" d="M 90,250 A 160,160 0 0,1 410,250" fill="none"/>
-        <text font-family="'Montserrat', sans-serif" font-weight="900" font-size="30" fill="url(#goldGrad)" letter-spacing="6" text-anchor="middle">
-          <textPath href="#textArcTop" startOffset="50%">KALI SUD</textPath>
-        </text>
-        <!-- Arc de texte BAS : CBD SHOP (Tracé de gauche à droite pour ne pas être à l'envers) -->
-        <path id="textArcBottom" d="M 90,250 A 160,160 0 0,0 410,250" fill="none"/>
-        <text font-family="'Montserrat', sans-serif" font-weight="900" font-size="28" fill="url(#goldGrad)" letter-spacing="6" text-anchor="middle">
-          <textPath href="#textArcBottom" startOffset="50%">CBD SHOP</textPath>
-        </text>
-        <!-- Cercles séparateurs intérieurs -->
-        <circle cx="250" cy="250" r="170" fill="none" stroke="url(#ringGrad)" stroke-width="2" opacity="0.6"/>
-        <!-- Lettres KS centrales -->
-        <text x="250" y="295" font-family="'Montserrat', sans-serif" font-weight="900" font-size="150" fill="url(#goldGrad)" text-anchor="middle" letter-spacing="-3" filter="url(#glow)">KS</text>
-      </svg>
+      <img src="logo.png.PNG" alt="Kali Sud Logo" class="logo-img">
     </div>
 
-    <!-- Nom de marque KALI SUD avec le A sans barre -->
     <h1 class="brand-title">K&#923;LI SUD</h1>
     <p class="brand-subtitle">CBD ET PRODUITS DÉRIVÉS</p>
 
-    <!-- Liste des liens -->
     <div class="links-list">
       <a href="https://share.google/5i63pDNlSwbsmNd4T" target="_blank" class="link-btn">
         <i class="fab fa-google"></i>
@@ -281,7 +231,6 @@
     </footer>
   </div>
 
-  <!-- Modal QR Code -->
   <div class="modal" id="qrModal">
     <div class="modal-content">
       <h3>Scannez le QR Code</h3>
