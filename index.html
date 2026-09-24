@@ -41,93 +41,29 @@
       text-align: center;
     }
 
-    /* Logo Badge KS */
+    /* Logo officiel KS */
     .logo-container {
-      margin-bottom: 25px;
+      margin-bottom: 20px;
     }
 
-    .logo-ks-badge {
-      width: 140px;
-      height: 140px;
-      margin: 0 auto;
+    .logo-img {
+      width: 160px;
+      height: 160px;
       border-radius: 50%;
-      background: radial-gradient(circle, #102113 0%, #070a08 100%);
-      border: 3px solid var(--accent-green);
-      box-shadow: 0 0 25px rgba(144, 209, 54, 0.4), inset 0 0 15px rgba(144, 209, 54, 0.2);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      position: relative;
+      object-fit: cover;
+      border: 2px solid var(--accent-green);
+      box-shadow: 0 0 25px rgba(144, 209, 54, 0.4);
     }
 
-    .logo-ks-badge::before {
-      content: '';
-      position: absolute;
-      top: 5px;
-      left: 5px;
-      right: 5px;
-      bottom: 5px;
-      border: 1px solid var(--accent-gold);
-      border-radius: 50%;
-      opacity: 0.8;
-    }
-
-    .logo-ks-top {
-      font-size: 0.55rem;
-      font-weight: 700;
-      color: var(--accent-green);
-      letter-spacing: 2px;
-      margin-bottom: 2px;
-    }
-
-    .logo-ks-main {
-      font-size: 3.2rem;
-      font-weight: 900;
-      color: var(--accent-green);
-      line-height: 0.9;
-      letter-spacing: 2px;
-      text-shadow: 0 0 12px rgba(144, 209, 54, 0.6);
-    }
-
-    .logo-ks-bottom {
-      font-size: 0.55rem;
-      font-weight: 700;
-      color: var(--accent-green);
-      letter-spacing: 2px;
-      margin-top: 2px;
-    }
-
-    /* Enseigne KALI SUD avec le A spécifique */
+    /* Enseigne KALI SUD avec le A stylisé */
     .brand-title {
       font-size: 2.3rem;
       font-weight: 900;
-      letter-spacing: 4px;
+      letter-spacing: 3px;
       color: var(--accent-green);
       text-transform: uppercase;
       margin-bottom: 6px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 2px;
       text-shadow: 0 0 15px rgba(144, 209, 54, 0.35);
-    }
-
-    /* Modification de la lettre A pour supprimer la barre horizontale */
-    .letter-a {
-      position: relative;
-      display: inline-block;
-    }
-
-    .letter-a::after {
-      content: '';
-      position: absolute;
-      top: 55%;
-      left: -10%;
-      width: 120%;
-      height: 25%;
-      background-color: var(--bg-color);
-      z-index: 2;
     }
 
     .brand-subtitle {
@@ -254,19 +190,13 @@
 <body>
 
   <div class="container">
-    <!-- Logo KS Circulaire -->
+    <!-- Logo Officiel KS (Image embarquée) -->
     <div class="logo-container">
-      <div class="logo-ks-badge">
-        <span class="logo-ks-top">KALI SUD</span>
-        <span class="logo-ks-main">KS</span>
-        <span class="logo-ks-bottom">CBD SHOP</span>
-      </div>
+      <img src="https://raw.githubusercontent.com/kalisudcbd/kalisudcbd-links/main/logo-png.png" alt="Kali Sud Logo" class="logo-img" onerror="this.src='https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=KS';">
     </div>
 
-    <!-- Nom de marque avec le A sans barre -->
-    <h1 class="brand-title">
-      K<span class="letter-a">A</span>LI SUD
-    </h1>
+    <!-- Nom de marque KALI SUD avec le A sans barre -->
+    <h1 class="brand-title">K&#923;LI SUD</h1>
     <p class="brand-subtitle">CBD ET PRODUITS DÉRIVÉS</p>
 
     <!-- Liste des liens -->
