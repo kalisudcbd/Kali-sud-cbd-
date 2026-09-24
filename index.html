@@ -47,8 +47,8 @@
     }
 
     .logo-img {
-      width: 160px;
-      height: 160px;
+      width: 170px;
+      height: 170px;
       border-radius: 50%;
       object-fit: cover;
       border: 2px solid var(--accent-green);
@@ -190,7 +190,7 @@
 <body>
 
   <div class="container">
-    <!-- Logo Officiel KS circulaire SVG/Base64 ultra-net -->
+    <!-- Logo Officiel KS circulaire vectoriel -->
     <div class="logo-container">
       <svg class="logo-img" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
         <defs>
@@ -219,24 +219,23 @@
         </defs>
         <!-- Fond sombre -->
         <circle cx="250" cy="250" r="240" fill="url(#bgGrad)"/>
-        <!-- Anneau extérieur double -->
+        <!-- Anneaux extérieurs -->
         <circle cx="250" cy="250" r="230" fill="none" stroke="url(#ringGrad)" stroke-width="8" filter="url(#glow)"/>
         <circle cx="250" cy="250" r="215" fill="none" stroke="url(#ringGrad)" stroke-width="3" opacity="0.8"/>
-        <!-- Arc texte haut KALI SUD -->
-        <path id="textArcTop" d="M 100,250 A 150,150 0 0,1 400,250" fill="none"/>
-        <text font-family="'Montserrat', sans-serif" font-weight="900" font-size="32" fill="url(#goldGrad)" letter-spacing="6" text-anchor="middle">
+        <!-- Arc de texte HAUT : KALI SUD -->
+        <path id="textArcTop" d="M 90,250 A 160,160 0 0,1 410,250" fill="none"/>
+        <text font-family="'Montserrat', sans-serif" font-weight="900" font-size="30" fill="url(#goldGrad)" letter-spacing="6" text-anchor="middle">
           <textPath href="#textArcTop" startOffset="50%">KALI SUD</textPath>
         </text>
-        <!-- Arc texte bas CBD SHOP -->
-        <path id="textArcBottom" d="M 400,250 A 150,150 0 0,1 100,250" fill="none"/>
-        <text font-family="'Montserrat', sans-serif" font-weight="900" font-size="30" fill="url(#goldGrad)" letter-spacing="6" text-anchor="middle">
+        <!-- Arc de texte BAS : CBD SHOP (Tracé de gauche à droite pour ne pas être à l'envers) -->
+        <path id="textArcBottom" d="M 90,250 A 160,160 0 0,0 410,250" fill="none"/>
+        <text font-family="'Montserrat', sans-serif" font-weight="900" font-size="28" fill="url(#goldGrad)" letter-spacing="6" text-anchor="middle">
           <textPath href="#textArcBottom" startOffset="50%">CBD SHOP</textPath>
         </text>
-        <!-- Traits arcs séparateurs -->
-        <path d="M 80,250 A 170,170 0 0,1 420,250" fill="none" stroke="url(#ringGrad)" stroke-width="2"/>
-        <path d="M 420,250 A 170,170 0 0,1 80,250" fill="none" stroke="url(#ringGrad)" stroke-width="2"/>
+        <!-- Cercles séparateurs intérieurs -->
+        <circle cx="250" cy="250" r="170" fill="none" stroke="url(#ringGrad)" stroke-width="2" opacity="0.6"/>
         <!-- Lettres KS centrales -->
-        <text x="250" y="295" font-family="'Montserrat', sans-serif" font-weight="900" font-size="160" fill="url(#goldGrad)" text-anchor="middle" letter-spacing="-5" filter="url(#glow)">KS</text>
+        <text x="250" y="295" font-family="'Montserrat', sans-serif" font-weight="900" font-size="150" fill="url(#goldGrad)" text-anchor="middle" letter-spacing="-3" filter="url(#glow)">KS</text>
       </svg>
     </div>
 
