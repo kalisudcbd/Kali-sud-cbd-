@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kali Sud - CBD Shop</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --bg-color: #0b0f0c;
+      --card-bg: #131a15;
+      --text-color: #ffffff;
+      --accent-green: #8cc63f;
+      --accent-gold: #c5a059;
+      --border-color: #233326;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      background-image: radial-gradient(circle at top, #1a2b1d 0%, #0b0f0c 70%);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 480px;
+      text-align: center;
+    }
+
+    .logo-container {
+      margin-bottom: 20px;
+    }
+
+    .logo {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 25px rgba(140, 198, 63, 0.4);
+      border: 2px solid var(--accent-green);
+    }
+
+    .brand-title {
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: var(--accent-green);
+      text-transform: uppercase;
+      margin-bottom: 5px;
+      text-shadow: 0 0 12px rgba(140, 198, 63, 0.3);
+    }
+
+    .brand-subtitle {
+      font-size: 0.9rem;
+      letter-spacing: 3px;
+      color: #a0a0a0;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+      padding: 6px 0;
+    }
+
+    .links-list {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .link-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      padding: 16px 20px;
+      border-radius: 12px;
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    .link-btn:hover {
+      border-color: var(--accent-green);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(140, 198, 63, 0.25);
+      background-color: #18241b;
+    }
+
+    .link-btn i {
+      font-size: 1.4rem;
+      width: 30px;
+      color: var(--accent-green);
+    }
+
+    .link-btn span {
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    .qr-trigger {
+      cursor: pointer;
+    }
+
+    /* Modal QR Code */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(5px);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .modal-content {
+      background: var(--card-bg);
+      border: 1px solid var(--accent-green);
+      padding: 30px;
+      border-radius: 20px;
+      text-align: center;
+      max-width: 320px;
+      width: 90%;
+      box-shadow: 0 0 30px rgba(140, 198, 63, 0.3);
+    }
+
+    .modal-content h3 {
+      color: var(--accent-green);
+      margin-bottom: 15px;
+    }
+
+    .qr-img {
+      width: 200px;
+      height: 200px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      border: 4px solid #fff;
+    }
+
+    .close-btn {
+      background: var(--accent-green);
+      color: #000;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    footer {
+      margin-top: 35px;
+      font-size: 0.8rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="logo-container">
+      <!-- Si tu ajoutes ton logo dans le dépôt, nomme-le logo.png -->
+      <img src="logo.png" alt="Kali Sud Logo" class="logo">
+    </div>
+
+    <h1 class="brand-title">KALI SUD</h1>
+    <p class="brand-subtitle">CBD ET PRODUITS DÉRIVÉS</p>
+
+    <div class="links-list">
+      <a href="https://share.google/5i63pDNlSwbsmNd4T" target="_blank" class="link-btn">
+        <i class="fab fa-google"></i>
+        <span>Fiche Google & Avis</span>
+        <i class="fas fa-external-link-alt" style="font-size: 0.8rem; opacity: 0.5;"></i>
+      </a>
+
+      <a href="https://www.tiktok.com/@kalisudcbd" target="_blank" class="link-btn">
+        <i class="fab fa-tiktok"></i>
+        <span>TikTok</span>
+        <i class="fas fa-external-link-alt" style="font-size: 0.8rem; opacity: 0.5;"></i>
+      </a>
+
+      <a href="https://www.instagram.com/kalisudcbd" target="_blank" class="link-btn">
+        <i class="fab fa-instagram"></i>
+        <span>Instagram</span>
+        <i class="fas fa-external-link-alt" style="font-size: 0.8rem; opacity: 0.5;"></i>
+      </a>
+
+      <a href="https://www.facebook.com/kalisudcbd" target="_blank" class="link-btn">
+        <i class="fab fa-facebook"></i>
+        <span>Facebook</span>
+        <i class="fas fa-external-link-alt" style="font-size: 0.8rem; opacity: 0.5;"></i>
+      </a>
+
+      <div class="link-btn qr-trigger" onclick="openModal()">
+        <i class="fas fa-qrcode"></i>
+        <span>Afficher le QR Code</span>
+        <i class="fas fa-chevron-right" style="font-size: 0.8rem; opacity: 0.5;"></i>
+      </div>
+    </div>
+
+    <footer>
+      &copy; Kali Sud CBD Shop - Tous droits réservés
+    </footer>
+  </div>
+
+  <!-- Modal QR Code -->
+  <div class="modal" id="qrModal">
+    <div class="modal-content">
+      <h3>Scannez le QR Code</h3>
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://kalisudcbd.github.io/kalisudcbd-links/" alt="QR Code" class="qr-img">
+      <br>
+      <button class="close-btn" onclick="closeModal()">Fermer</button>
+    </div>
+  </div>
+
+  <script>
+    function openModal() {
+      document.getElementById('qrModal').style.display = 'flex';
+    }
+    function closeModal() {
+      document.getElementById('qrModal').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
