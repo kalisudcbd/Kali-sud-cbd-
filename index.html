@@ -6,11 +6,13 @@
   <title>Kali Sud - CBD Shop</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700;900&display=swap');
+
     :root {
       --bg-color: #0b0f0c;
       --card-bg: #131a15;
       --text-color: #ffffff;
-      --accent-green: #8cc63f;
+      --accent-green: #90d136;
       --accent-gold: #c5a059;
       --border-color: #233326;
     }
@@ -19,7 +21,7 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-family: 'Montserrat', sans-serif;
     }
 
     body {
@@ -30,28 +32,28 @@
       align-items: center;
       min-height: 100vh;
       padding: 20px;
-      background-image: radial-gradient(circle at top, #1a2b1d 0%, #0b0f0c 70%);
+      background-image: radial-gradient(circle at top, #162619 0%, #0b0f0c 75%);
     }
 
     .container {
       width: 100%;
-      max-width: 480px;
+      max-width: 440px;
       text-align: center;
     }
 
+    /* Logo Badge KS */
     .logo-container {
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
 
-    /* Logo visuel officiel KS si pas de fichier image */
-    .logo-badge {
-      width: 130px;
-      height: 130px;
+    .logo-ks-badge {
+      width: 140px;
+      height: 140px;
       margin: 0 auto;
       border-radius: 50%;
-      background: radial-gradient(circle, #19311c 0%, #0b0f0c 100%);
+      background: radial-gradient(circle, #102113 0%, #070a08 100%);
       border: 3px solid var(--accent-green);
-      box-shadow: 0 0 25px rgba(140, 198, 63, 0.4), inset 0 0 15px rgba(140, 198, 63, 0.2);
+      box-shadow: 0 0 25px rgba(144, 209, 54, 0.4), inset 0 0 15px rgba(144, 209, 54, 0.2);
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -59,60 +61,101 @@
       position: relative;
     }
 
-    .logo-badge::before {
+    .logo-ks-badge::before {
       content: '';
       position: absolute;
-      top: 4px;
-      left: 4px;
-      right: 4px;
-      bottom: 4px;
+      top: 5px;
+      left: 5px;
+      right: 5px;
+      bottom: 5px;
       border: 1px solid var(--accent-gold);
       border-radius: 50%;
-      opacity: 0.7;
+      opacity: 0.8;
     }
 
-    .logo-badge .ks-text {
-      font-size: 3rem;
-      font-weight: 900;
-      color: var(--accent-green);
-      line-height: 1;
-      letter-spacing: 2px;
-      text-shadow: 0 0 10px rgba(140, 198, 63, 0.6);
-    }
-
-    .logo-badge .sub-text {
+    .logo-ks-top {
       font-size: 0.55rem;
       font-weight: 700;
-      color: var(--accent-gold);
-      letter-spacing: 1.5px;
+      color: var(--accent-green);
+      letter-spacing: 2px;
+      margin-bottom: 2px;
+    }
+
+    .logo-ks-main {
+      font-size: 3.2rem;
+      font-weight: 900;
+      color: var(--accent-green);
+      line-height: 0.9;
+      letter-spacing: 2px;
+      text-shadow: 0 0 12px rgba(144, 209, 54, 0.6);
+    }
+
+    .logo-ks-bottom {
+      font-size: 0.55rem;
+      font-weight: 700;
+      color: var(--accent-green);
+      letter-spacing: 2px;
       margin-top: 2px;
     }
 
+    /* Enseigne KALI SUD avec le A spécifique */
     .brand-title {
-      font-size: 2.2rem;
-      font-weight: 800;
-      letter-spacing: 2px;
+      font-size: 2.3rem;
+      font-weight: 900;
+      letter-spacing: 4px;
       color: var(--accent-green);
       text-transform: uppercase;
-      margin-bottom: 5px;
-      text-shadow: 0 0 12px rgba(140, 198, 63, 0.3);
+      margin-bottom: 6px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2px;
+      text-shadow: 0 0 15px rgba(144, 209, 54, 0.35);
+    }
+
+    /* Modification de la lettre A pour supprimer la barre horizontale */
+    .letter-a {
+      position: relative;
+      display: inline-block;
+    }
+
+    .letter-a::after {
+      content: '';
+      position: absolute;
+      top: 55%;
+      left: -10%;
+      width: 120%;
+      height: 25%;
+      background-color: var(--bg-color);
+      z-index: 2;
     }
 
     .brand-subtitle {
-      font-size: 0.85rem;
+      font-size: 0.75rem;
+      font-weight: 700;
       letter-spacing: 3px;
-      color: #a0a0a0;
+      color: #b0b0b0;
       text-transform: uppercase;
-      margin-bottom: 25px;
-      border-top: 1px solid var(--border-color);
-      border-bottom: 1px solid var(--border-color);
-      padding: 6px 0;
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
     }
 
+    .brand-subtitle::before,
+    .brand-subtitle::after {
+      content: '';
+      height: 1px;
+      width: 25px;
+      background-color: var(--accent-green);
+    }
+
+    /* Boutons de liens */
     .links-list {
       display: flex;
       flex-direction: column;
-      gap: 15px;
+      gap: 14px;
     }
 
     .link-btn {
@@ -125,20 +168,20 @@
       border-radius: 12px;
       color: var(--text-color);
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 700;
       transition: all 0.3s ease;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
     }
 
     .link-btn:hover {
       border-color: var(--accent-green);
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(140, 198, 63, 0.25);
-      background-color: #18241b;
+      box-shadow: 0 6px 20px rgba(144, 209, 54, 0.25);
+      background-color: #172419;
     }
 
     .link-btn i {
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       width: 30px;
       color: var(--accent-green);
     }
@@ -175,7 +218,7 @@
       text-align: center;
       max-width: 320px;
       width: 90%;
-      box-shadow: 0 0 30px rgba(140, 198, 63, 0.3);
+      box-shadow: 0 0 30px rgba(144, 209, 54, 0.3);
     }
 
     .modal-content h3 {
@@ -203,7 +246,7 @@
 
     footer {
       margin-top: 35px;
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       color: #666;
     }
   </style>
@@ -211,45 +254,51 @@
 <body>
 
   <div class="container">
+    <!-- Logo KS Circulaire -->
     <div class="logo-container">
-      <div class="logo-badge">
-        <span class="ks-text">KS</span>
-        <span class="sub-text">CBD SHOP</span>
+      <div class="logo-ks-badge">
+        <span class="logo-ks-top">KALI SUD</span>
+        <span class="logo-ks-main">KS</span>
+        <span class="logo-ks-bottom">CBD SHOP</span>
       </div>
     </div>
 
-    <h1 class="brand-title">KALI SUD</h1>
+    <!-- Nom de marque avec le A sans barre -->
+    <h1 class="brand-title">
+      K<span class="letter-a">A</span>LI SUD
+    </h1>
     <p class="brand-subtitle">CBD ET PRODUITS DÉRIVÉS</p>
 
+    <!-- Liste des liens -->
     <div class="links-list">
       <a href="https://share.google/5i63pDNlSwbsmNd4T" target="_blank" class="link-btn">
         <i class="fab fa-google"></i>
         <span>Fiche Google & Avis</span>
-        <i class="fas fa-external-link-alt" style="font-size: 0.8rem; opacity: 0.5;"></i>
+        <i class="fas fa-chevron-right" style="font-size: 0.8rem; opacity: 0.4;"></i>
       </a>
 
       <a href="https://www.tiktok.com/@kalisudcbd" target="_blank" class="link-btn">
         <i class="fab fa-tiktok"></i>
         <span>TikTok</span>
-        <i class="fas fa-external-link-alt" style="font-size: 0.8rem; opacity: 0.5;"></i>
+        <i class="fas fa-chevron-right" style="font-size: 0.8rem; opacity: 0.4;"></i>
       </a>
 
       <a href="https://www.instagram.com/kalisudcbd" target="_blank" class="link-btn">
         <i class="fab fa-instagram"></i>
         <span>Instagram</span>
-        <i class="fas fa-external-link-alt" style="font-size: 0.8rem; opacity: 0.5;"></i>
+        <i class="fas fa-chevron-right" style="font-size: 0.8rem; opacity: 0.4;"></i>
       </a>
 
       <a href="https://www.facebook.com/kalisudcbd" target="_blank" class="link-btn">
         <i class="fab fa-facebook"></i>
         <span>Facebook</span>
-        <i class="fas fa-external-link-alt" style="font-size: 0.8rem; opacity: 0.5;"></i>
+        <i class="fas fa-chevron-right" style="font-size: 0.8rem; opacity: 0.4;"></i>
       </a>
 
       <div class="link-btn qr-trigger" onclick="openModal()">
         <i class="fas fa-qrcode"></i>
         <span>Afficher le QR Code</span>
-        <i class="fas fa-chevron-right" style="font-size: 0.8rem; opacity: 0.5;"></i>
+        <i class="fas fa-chevron-right" style="font-size: 0.8rem; opacity: 0.4;"></i>
       </div>
     </div>
 
