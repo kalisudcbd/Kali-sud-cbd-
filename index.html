@@ -190,9 +190,54 @@
 <body>
 
   <div class="container">
-    <!-- Logo Officiel KS (Image hébergée fiable) -->
+    <!-- Logo Officiel KS circulaire SVG/Base64 ultra-net -->
     <div class="logo-container">
-      <img src="https://i.postimg.cc/mDkxN3wz/logo-ks.png" alt="Kali Sud Logo" class="logo-img">
+      <svg class="logo-img" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#0a120b"/>
+            <stop offset="100%" stop-color="#020402"/>
+          </radialGradient>
+          <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#e8f3a3"/>
+            <stop offset="30%" stop-color="#a4e03b"/>
+            <stop offset="70%" stop-color="#5a8c16"/>
+            <stop offset="100%" stop-color="#2a4507"/>
+          </linearGradient>
+          <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#c1f054"/>
+            <stop offset="50%" stop-color="#69a318"/>
+            <stop offset="100%" stop-color="#325208"/>
+          </linearGradient>
+          <filter id="glow">
+            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+            <feMerge>
+              <feMergeNode in="coloredBlur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+        </defs>
+        <!-- Fond sombre -->
+        <circle cx="250" cy="250" r="240" fill="url(#bgGrad)"/>
+        <!-- Anneau extérieur double -->
+        <circle cx="250" cy="250" r="230" fill="none" stroke="url(#ringGrad)" stroke-width="8" filter="url(#glow)"/>
+        <circle cx="250" cy="250" r="215" fill="none" stroke="url(#ringGrad)" stroke-width="3" opacity="0.8"/>
+        <!-- Arc texte haut KALI SUD -->
+        <path id="textArcTop" d="M 100,250 A 150,150 0 0,1 400,250" fill="none"/>
+        <text font-family="'Montserrat', sans-serif" font-weight="900" font-size="32" fill="url(#goldGrad)" letter-spacing="6" text-anchor="middle">
+          <textPath href="#textArcTop" startOffset="50%">KALI SUD</textPath>
+        </text>
+        <!-- Arc texte bas CBD SHOP -->
+        <path id="textArcBottom" d="M 400,250 A 150,150 0 0,1 100,250" fill="none"/>
+        <text font-family="'Montserrat', sans-serif" font-weight="900" font-size="30" fill="url(#goldGrad)" letter-spacing="6" text-anchor="middle">
+          <textPath href="#textArcBottom" startOffset="50%">CBD SHOP</textPath>
+        </text>
+        <!-- Traits arcs séparateurs -->
+        <path d="M 80,250 A 170,170 0 0,1 420,250" fill="none" stroke="url(#ringGrad)" stroke-width="2"/>
+        <path d="M 420,250 A 170,170 0 0,1 80,250" fill="none" stroke="url(#ringGrad)" stroke-width="2"/>
+        <!-- Lettres KS centrales -->
+        <text x="250" y="295" font-family="'Montserrat', sans-serif" font-weight="900" font-size="160" fill="url(#goldGrad)" text-anchor="middle" letter-spacing="-5" filter="url(#glow)">KS</text>
+      </svg>
     </div>
 
     <!-- Nom de marque KALI SUD avec le A sans barre -->
