@@ -39,46 +39,32 @@
       width: 100%;
       max-width: 440px;
       text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
     }
 
-    /* Conteneur de ton vrai logo d'origine */
     .logo-container {
       margin-bottom: 20px;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
     }
 
-    /* Affichage propre et centré de ton image */
     .logo-img {
-      width: 220px;
-      height: 220px;
+      width: 160px;
+      height: 160px;
       border-radius: 50%;
       object-fit: cover;
-      display: block;
-      margin: 0 auto;
-      filter: drop-shadow(0 0 20px rgba(144, 209, 54, 0.35));
+      border: 2px solid var(--accent-green);
+      box-shadow: 0 0 25px rgba(144, 209, 54, 0.4);
     }
 
-    /* Enseigne KALI SUD parfaitement centrée */
     .brand-title {
-      width: 100%;
-      font-size: 2.4rem;
+      font-size: 2.3rem;
       font-weight: 900;
-      letter-spacing: 4px;
+      letter-spacing: 3px;
       color: var(--accent-green);
       text-transform: uppercase;
       margin-bottom: 6px;
-      text-align: center;
       text-shadow: 0 0 15px rgba(144, 209, 54, 0.35);
     }
 
     .brand-subtitle {
-      width: 100%;
       font-size: 0.75rem;
       font-weight: 700;
       letter-spacing: 3px;
@@ -99,9 +85,7 @@
       background-color: var(--accent-green);
     }
 
-    /* Boutons de liens */
     .links-list {
-      width: 100%;
       display: flex;
       flex-direction: column;
       gap: 14px;
@@ -144,7 +128,6 @@
       cursor: pointer;
     }
 
-    /* Modal QR Code */
     .modal {
       display: none;
       position: fixed;
@@ -203,16 +186,14 @@
 <body>
 
   <div class="container">
-    <!-- Ton vrai fichier image du logo -->
+    <!-- Remplace le NOM_EXACT_DU_FICHIER ci-dessous (ex: logo-png.png ou logo.png.PNG) -->
     <div class="logo-container">
-      <img src="logo-png.png" alt="Kali Sud Logo" class="logo-img">
+      <img src="NOM_EXACT_DU_FICHIER" alt="Kali Sud Logo" class="logo-img">
     </div>
 
-    <!-- Nom de marque KALI SUD parfaitement centré -->
     <h1 class="brand-title">K&#923;LI SUD</h1>
     <p class="brand-subtitle">CBD ET PRODUITS DÉRIVÉS</p>
 
-    <!-- Liste des liens -->
     <div class="links-list">
       <a href="https://share.google/5i63pDNlSwbsmNd4T" target="_blank" class="link-btn">
         <i class="fab fa-google"></i>
@@ -250,7 +231,6 @@
     </footer>
   </div>
 
-  <!-- Modal QR Code -->
   <div class="modal" id="qrModal">
     <div class="modal-content">
       <h3>Scannez le QR Code</h3>
