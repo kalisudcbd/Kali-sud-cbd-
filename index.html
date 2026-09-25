@@ -44,7 +44,7 @@
       align-items: center;
     }
 
-    /* Logo officiel KS */
+    /* Conteneur de ton vrai logo d'origine */
     .logo-container {
       margin-bottom: 20px;
       width: 100%;
@@ -53,10 +53,12 @@
       align-items: center;
     }
 
+    /* Affichage propre et centré de ton image */
     .logo-img {
       width: 220px;
       height: 220px;
       border-radius: 50%;
+      object-fit: cover;
       display: block;
       margin: 0 auto;
       filter: drop-shadow(0 0 20px rgba(144, 209, 54, 0.35));
@@ -201,59 +203,9 @@
 <body>
 
   <div class="container">
-    <!-- Logo Officiel KS ajusté -->
+    <!-- Ton vrai fichier image du logo -->
     <div class="logo-container">
-      <svg class="logo-img" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stop-color="#0a120b"/>
-            <stop offset="100%" stop-color="#020402"/>
-          </radialGradient>
-          <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#e8f3a3"/>
-            <stop offset="30%" stop-color="#a4e03b"/>
-            <stop offset="70%" stop-color="#5a8c16"/>
-            <stop offset="100%" stop-color="#2a4507"/>
-          </linearGradient>
-          <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#c1f054"/>
-            <stop offset="50%" stop-color="#69a318"/>
-            <stop offset="100%" stop-color="#325208"/>
-          </linearGradient>
-          <filter id="glow">
-            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-            <feMerge>
-              <feMergeNode in="coloredBlur"/>
-              <feMergeNode in="SourceGraphic"/>
-            </feMerge>
-          </filter>
-        </defs>
-
-        <!-- Fond sombre -->
-        <circle cx="250" cy="250" r="240" fill="url(#bgGrad)"/>
-        
-        <!-- Anneaux extérieurs -->
-        <circle cx="250" cy="250" r="230" fill="none" stroke="url(#ringGrad)" stroke-width="8" filter="url(#glow)"/>
-        <circle cx="250" cy="250" r="215" fill="none" stroke="url(#ringGrad)" stroke-width="3" opacity="0.8"/>
-        
-        <!-- Arc de texte HAUT : KALI SUD -->
-        <path id="textArcTop" d="M 85,250 A 165,165 0 0,1 415,250" fill="none"/>
-        <text font-family="'Montserrat', sans-serif" font-weight="900" font-size="32" fill="url(#goldGrad)" letter-spacing="5" text-anchor="middle">
-          <textPath href="#textArcTop" startOffset="50%">KALI SUD</textPath>
-        </text>
-
-        <!-- Arc de texte BAS : CBD SHOP (Ajusté pour combler le bas) -->
-        <path id="textArcBottom" d="M 75,250 A 175,175 0 0,0 425,250" fill="none"/>
-        <text font-family="'Montserrat', sans-serif" font-weight="900" font-size="34" fill="url(#goldGrad)" letter-spacing="6" text-anchor="middle">
-          <textPath href="#textArcBottom" startOffset="50%">CBD SHOP</textPath>
-        </text>
-
-        <!-- Cercles séparateurs intérieurs -->
-        <circle cx="250" cy="250" r="160" fill="none" stroke="url(#ringGrad)" stroke-width="2" opacity="0.6"/>
-
-        <!-- Lettres KS centrales -->
-        <text x="250" y="290" font-family="'Montserrat', sans-serif" font-weight="900" font-size="145" fill="url(#goldGrad)" text-anchor="middle" letter-spacing="-3" filter="url(#glow)">KS</text>
-      </svg>
+      <img src="logo-png.png" alt="Kali Sud Logo" class="logo-img">
     </div>
 
     <!-- Nom de marque KALI SUD parfaitement centré -->
